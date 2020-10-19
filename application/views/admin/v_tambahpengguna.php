@@ -50,7 +50,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Lokasi Usaha</label>
-              <input type="text" class="form-control" name="lokasi_usaha" placeholder="Nama sumber" required="required">
+              <input type="text" class="form-control" name="lokasi_usaha" placeholder="Lokasi Usaha" required="required">
             </div>  
           </div>
             <div class="card-footer">
