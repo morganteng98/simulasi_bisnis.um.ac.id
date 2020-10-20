@@ -9,7 +9,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url('admin/analysis/Promotion'); ?>">Media Promosi</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('admin/analysis'); ?>">Media Promosi</a></li>
               <li class="breadcrumb-item active">Edit</li>
             </ol>
           </div>

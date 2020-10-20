@@ -272,7 +272,7 @@ class Analysis extends CI_Controller {
 			$str_ssrn = $this->input->post('str_ssrn');
 			$wks_ssrn = $this->input->post('wks_ssrn');
 			$oprt_ssrn = $this->input->post('oprt_ssrn');
-			$wks_ssrn = $this->input->post('wks_ssrn');
+			$thrt_ssrn = $this->input->post('thrt_ssrn');
 			
 		 
 			$data = array(
@@ -280,7 +280,8 @@ class Analysis extends CI_Controller {
 				'str_ssrn' => $str_ssrn,
 				'wks_ssrn' => $wks_ssrn,
 				'oprt_ssrn' => $oprt_ssrn,
-				'wks_ssrn' => $wks_ssrn
+				'wks_ssrn' => $wks_ssrn,
+				'thrt_ssrn' => $thrt_ssrn
 				
 			);
 		 
