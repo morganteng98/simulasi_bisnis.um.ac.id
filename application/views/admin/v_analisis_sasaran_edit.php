@@ -21,49 +21,49 @@
     
     <!-- Main content -->
     <section class="content">
-      <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Media Promosi</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <!-- --------------- Form action , Name ------------------------------------ -->
-               <?php foreach($tbl_sasaran as $row){ ?>
-             <form action="<?php echo base_url(). 'Admin/Analysis/EditTargetAction'; ?>" method="POST" enctype="multipart/form-data">
-               
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama Media Promosi</label>
-                    <input type="text" class="form-control"  name="nama_ssrn"  value="<?php echo $row->nama_ssrn ?>" placeholder="Nama Media Promosi" required="required">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Strenght</label>
-                    <input type="text" class="form-control"  name="str_ssrn"  value="<?php echo $row->str_ssrn ?>" placeholder="Strenght" required="required">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Weakness</label>
-                    <input type="text" class="form-control"  name="wks_ssrn"  value="<?php echo $row->wks_ssrn ?>" placeholder="Weakness" required="required">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Opportunity</label>
-                    <input type="text" class="form-control"  name="oprt_ssrn"  value="<?php echo $row->oprt_ssrn ?>" placeholder="Opportunity" required="required">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Threat</label>
-                    <input type="text" class="form-control"  name="thrt_ssrn"  value="<?php echo $row->thrt_ssrn ?>" placeholder="Threat" required="required">
-                  </div>
-                 
-                  <?php } ?>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <a class="btn btn-success" href="<?php echo base_url('Admin/Analysis/Promotion'); ?>">Kembali</a>
-                  <button type="submit" class="btn btn-primary" value="simpan" name="save">Simpan</button>
-
-                </div>
-              </form>
+      <div class="card" style="width: 95%;">
+            <div class="card-header">
+              <h4 class="m-0 font-weight-bold text-primary"><i class="fas fa-fw fa-book" style="margin-right: 10px;"></i> Edit Artikel</h4>
             </div>
+            <div class="card-body">
+
+          <?php foreach($tbl_sasaran as $row){ ?>
+          <form action="<?php echo base_url(). 'Admin/Analysis/EditTargetAction'; ?>" method="POST" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="id_ssrn" value="<?php echo $row->id_ssrn ?>">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="nama_ssrn" value="<?php echo $row->nama_ssrn ?>">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="str_ssrn" value="<?php echo $row->str_ssrn ?>">
+      </div>
+          <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="wks_ssrn" value="<?php echo $row->wks_ssrn ?>">
+      </div>
+          <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="oprt_ssrn" value="<?php echo $row->oprt_ssrn ?>">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Id Artikel" name="thrt_ssrn" value="<?php echo $row->thrt_ssrn ?>">
+      </div>
+          
+          
+          
+        
+          
+          
+
+          <div class="tombol" style="float: right;">
+          <a style="width: 100px;" class="btn btn-danger" href="<?php echo base_url('index.php/admin/c_artikel'); ?>" role="button">Kembali</a>
+          <button style="width: 100px;margin-left: 10px;" type="submit" class="btn btn-primary" value="simpan" name="save">Save</button>
+        </div>
+        </form>
+        <?php } ?>
+
+      </div>
+    </div>
     </section>
     <!-- /.content -->
 
