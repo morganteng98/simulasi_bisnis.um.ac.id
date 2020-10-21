@@ -196,7 +196,7 @@ class Analysis extends CI_Controller {
 			redirect('Admin/Analysis/Promotion');
 			}
 
-		function DeleteMP($id_mp
+		function DeleteMP($id_mp)
 		{
 	 		$where = array('id_mp' => $id_mp);
 			$this->m_analysis->hapus_data_mp($where,'tbl_media_promosi');
