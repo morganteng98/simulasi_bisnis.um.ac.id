@@ -1,6 +1,5 @@
- <!-- Content Wrapper. Contains page content -->
+
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -14,24 +13,16 @@
               <li class="breadcrumb-item active">Media Promosi</li>
             </ol>
           </div>
-
-
         </div>
       </div>
     </div>
     
-    <!-- Main content -->
     <section class="content">
       <div class="card"></div>
-            <!-- /.card -->
             <div class="card">                      
-           
-              <!-- /.card-header -->
-            
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  
+                  <thead>                  
                   <tr>
                    <th style="width: 10px">No</th>
                     <th style="width: 100px">Media Promosi</th>
@@ -39,9 +30,7 @@
                     <th style="width: 100px">Weakness</th>
                     <th style="width: 100px">Opportunity</th>
                     <th style="width: 100px">Threat</th>
-
                     <th style="width: 200px">Aksi</th>
-                
                   </tr>
 
                   </thead>
@@ -58,7 +47,7 @@
               <td><?php echo $row->oprt_mp; ?></td>
               <td><?php echo $row->thrt_mp; ?></td>
               <td><a class="btn btn-success" href="<?php echo base_url('Admin/Analysis/EditPromotion/'.$row->id_mp) ?>">Edit</a>
-                            <a class="btn btn-danger" href="<?php echo base_url('Admin/Analysis/delete_mp/'.$row->id_mp) ?>">Hapus</a></td>   
+                            <a class="btn btn-danger" href="<?php echo base_url('Admin/Analysis/DeleteMP/'.$row->id_mp) ?>">Hapus</a></td>   
                       </tr></td>    
              
               

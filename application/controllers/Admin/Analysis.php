@@ -1,4 +1,4 @@
-<?php
+ <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Analysis extends CI_Controller {
@@ -111,10 +111,14 @@ class Analysis extends CI_Controller {
 			$this->m_analysis->hapus_data_mp($where,'tbl_produk');
 			redirect('Admin/Analysis/Product');
 	 	}
-// ---------------------------------------------- Fungsi fungsi Media Promosi ----------------------------------------------
+
+
+// ---------------------------------------------- 			    ----------------------------------------------
+// ---------------------------------------------- Media Promosi ----------------------------------------------
+// ---------------------------------------------- 			    ----------------------------------------------
+
 	 	function Promotion()
 	 	{
-			// Menampilkan form promosi
 	 		$data['tbl_media_promosi']=$this->m_analysis->tampil_media_promosi();
 		 	$this->load->view('admin/pecah/i_head');
 			$this->load->view('admin/pecah/i_navbar');
@@ -166,9 +170,8 @@ class Analysis extends CI_Controller {
 			$this->load->view('admin/pecah/i_footer');
 	 	} 
 
-		function EditPromotionAction($id_mp)
+		function EditPromotionAction()
 		{
-			//Fungsi untuk mengupdate data
 			$id_mp = $this->input->post('id_mp');
 			$nama_mp = $this->input->post('nama_mp');
 			$str_mp = $this->input->post('str_mp');
@@ -176,7 +179,8 @@ class Analysis extends CI_Controller {
 			$oprt_mp = $this->input->post('oprt_mp');
 			$thrt_mp = $this->input->post('thrt_mp');
 			
-			$data = array(
+			$data = array
+			(
 				'nama_mp' => $nama_mp,
 				'str_mp' => $str_mp,
 				'wks_mp' => $wks_mp,
@@ -192,14 +196,16 @@ class Analysis extends CI_Controller {
 			redirect('Admin/Analysis/Promotion');
 			}
 
-		//fungsi hapus 
-			function delete_mp($id_mp){
+		function DeleteMP($id_mp
+		{
 	 		$where = array('id_mp' => $id_mp);
 			$this->m_analysis->hapus_data_mp($where,'tbl_media_promosi');
 			redirect('Admin/Analysis/Promotion');
 	 	}
 
-// ----------------------------------- Media Promosi --------------------------------------
+// ---------------------------------------------- 			    ----------------------------------------------
+// ---------------------------------------------- Media Promosi ----------------------------------------------
+// ---------------------------------------------- 			    ----------------------------------------------
 	 		
 
 
