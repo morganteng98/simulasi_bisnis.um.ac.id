@@ -21,13 +21,7 @@
     
     <!-- Main content -->
     <section class="content">
-      <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Produk</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <!-- --------------- Form action , Name ------------------------------------ -->
+      <div class="card">
                <?php foreach($tbl_produk as $row){ ?>
              <form action="<?php echo base_url('index.php/Admin/Analysis/EditProductAction'); ?>" method="POST" enctype="multipart/form-data">
                
@@ -54,20 +48,12 @@
                   </div>
                  
                   <?php } ?>
-                </div>
-                <!-- /.card-body -->
-
                 <div class="card-footer">
+                  <!-- <a class="btn btn-success" href="<?php echo base_url('Admin/Analysis/Promotion'); ?>">Kembali</a> -->
                   <button type="submit" class="btn btn-primary">Simpan</button>
-
-                 <!--  <input type="submit" name="btn" class="btn btn-success" value="save"> -->
-                   <a class="btn btn-success" href="<?php echo base_url('Admin/Analysis/Promotion'); ?>">Kembali</a>
-                  
                 </div>
               </form>
             </div>
     </section>
-    <!-- /.content -->
-
-  </div>
+</div>
 

@@ -17,9 +17,9 @@
     </div>
 
 <section class="content">
- <div class="card card-primary">
-    <div class="card-header"><h4>Form Edit Media Promosi</h4></div>
-      <div class="card-body"> 
+ 
+    <div class="card">
+      
         <?php foreach($tbl_media_promosi as $row){ ?>
         <form action="<?php echo base_url(). 'Admin/Analysis/EditPromotionAction'; ?>" method="POST" enctype="multipart/form-data">
       <div class="card-body">
@@ -46,15 +46,15 @@
             <label for="exampleInputEmail1">Threat Promosi</label>
             <input type="text" class="form-control" placeholder="Threat Promosi" name="thrt_mp" value="<?php echo $row->thrt_mp ?>">
         </div>
+        <div class="card-footer">
+         <a  class="btn btn-success" href="<?php echo base_url('Admin/Analysis/Promotion'); ?>" role="button">Kembali</a>
+        <!-- <button type="reset" class="btn btn-danger">Reset</button> -->
+             <button type="submit" class="btn btn-primary">Simpan</button>    
+        </div>
+        </form>
         </div>
     </div>
-    <div class="card-footer">
-      <a  class="btn btn-success" href="<?php echo base_url('Admin/Analysis/Promotion'); ?>" role="button">Kembali</a>
-      <button type="reset" class="btn btn-danger">Reset</button>
-      <button type="submit" class="btn btn-primary">Simpan</button>    
-    </div>
-        </form>
         <?php } ?>
-      </div>
+      
     </section>
   </div>

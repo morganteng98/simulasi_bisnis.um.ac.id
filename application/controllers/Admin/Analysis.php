@@ -7,15 +7,26 @@ class Analysis extends CI_Controller {
 		parent::__construct();		
 		$this->load->model('m_analysis');
 		$this->load->helper('url');
-		
 	}
+
+// ---------------------------------------------- 			    ---------------------------------------------- Tampil
+// ---------------------------------------------- Media Promosi ---------------------------------------------- Tambah
+// ---------------------------------------------- 			    ---------------------------------------------- Ubah, Hapus
+
+
+
+
+
+
+
+
+
 
 	function All()
 	 	{
 		 	$data['tbl_produk']=$this->m_analysis->tampil_produk();
 	 		$data['tbl_sasaran']=$this->m_analysis->tampil_sasaran();
 	 		$data['tbl_media_promosi']=$this->m_analysis->tampil_media_promosi();
-
 
 		 	$this->load->view('admin/pecah/i_head');
 			$this->load->view('admin/pecah/i_navbar');
@@ -116,31 +127,25 @@ class Analysis extends CI_Controller {
 // ---------------------------------------------- 			    ----------------------------------------------
 // ---------------------------------------------- Media Promosi ----------------------------------------------
 // ---------------------------------------------- 			    ----------------------------------------------
-
 	 	function Promotion()
 	 	{
 	 		$data['tbl_media_promosi']=$this->m_analysis->tampil_media_promosi();
 		 	$this->load->view('admin/pecah/i_head');
 			$this->load->view('admin/pecah/i_navbar');
 			$this->load->view('admin/pecah/i_sidebar');
-		 	$this->load->view("admin/v_analisis_mediapromosi",$data); // tampilan yg di ubah
-			$this->load->view('admin/pecah/i_footer');
+		 	$this->load->view("admin/v_analisis_mediapromosi",$data);
 	 	}
-
 	 	function AddPromotion()
 	 	{
-			// Menambah Promosi	 	
 		 	$this->load->view('admin/pecah/i_head');
 			$this->load->view('admin/pecah/i_navbar');
 			$this->load->view('admin/pecah/i_sidebar');
-		 	$this->load->view("admin/v_analisis_mediapromosi_tambah"); // tampilan yg di ubah
-			$this->load->view('admin/pecah/i_footer');
+		 	$this->load->view("admin/v_analisis_mediapromosi_tambah");
+			$this->load->view('admin/pecah/i_footer');	
 	 	}
-
 	 	function AddPromotionAction()
-		 {	
-			//Aksi untuk menambah promosi	 	
-			$nama_mp = $this->input->post('nama_mp'); // Karena utk tambah data disini AI (auto increment) jadi tidak perlu + $id_mp
+		{	
+			$nama_mp = $this->input->post('nama_mp');
 			$str_mp = $this->input->post('str_mp');
 			$wks_mp = $this->input->post('wks_mp');
 			$oprt_mp = $this->input->post('oprt_mp');
@@ -156,20 +161,17 @@ class Analysis extends CI_Controller {
 			$this->m_analysis->input_data_mp($data,'tbl_media_promosi');
 			redirect('Admin/Analysis/Promotion');
 		}
-
-
 		function EditPromotion($id_mp)
 	 	{
-	 		//Aksi untuk edit media promosi
+	 	
 	 		$where = array('id_mp' => $id_mp);
 			$data['tbl_media_promosi'] = $this->m_analysis->edit_data_mp($where,'tbl_media_promosi')->result();
 		 	$this->load->view('admin/pecah/i_head');
 			$this->load->view('admin/pecah/i_navbar');
 			$this->load->view('admin/pecah/i_sidebar');
-		 	$this->load->view("admin/v_analisis_mediapromosi_edit",$data); // Akan diarahkan ke form edit
+		 	$this->load->view("admin/v_analisis_mediapromosi_edit",$data);
 			$this->load->view('admin/pecah/i_footer');
-	 	} 
-
+	 	}
 		function EditPromotionAction()
 		{
 			$id_mp = $this->input->post('id_mp');
@@ -202,7 +204,6 @@ class Analysis extends CI_Controller {
 			$this->m_analysis->hapus_data_mp($where,'tbl_media_promosi');
 			redirect('Admin/Analysis/Promotion');
 	 	}
-
 // ---------------------------------------------- 			    ----------------------------------------------
 // ---------------------------------------------- Media Promosi ----------------------------------------------
 // ---------------------------------------------- 			    ----------------------------------------------

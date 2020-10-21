@@ -20,6 +20,6 @@ class Blank extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/v_blank');
+		$this->load->view('admin/v_catatan');
 	}
 }
